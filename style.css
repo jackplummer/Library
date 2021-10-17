@@ -36,10 +36,15 @@
 }
 
 .close:hover,
-.close:focus,
+.close:focus {
+  color: black;
+  text-decoration: none;
+  cursor: pointer;
+}
+
 .delete-book:hover,
 .delete-book:focus {
-  color: black;
+  color: red;
   text-decoration: none;
   cursor: pointer;
 }

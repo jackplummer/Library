@@ -11,12 +11,12 @@ function Book(title, author, pages, read) {
   this.read = read
 };
 
-function addBookToLibrary(book) {
+function addBookToLibrary(book) { // add book object to library array
   bookString = `${book.title}, by ${book.author}, ${book.pages} pages long. ${book.read}.`
   return myLibrary.push(bookString);
 };
 
-function displayLibrary() {
+function displayLibrary() { // add books from library array to page
   library.textContent = '';
   for (const books in myLibrary) {
     let book = document.createElement('div');
@@ -25,7 +25,7 @@ function displayLibrary() {
     book.textContent = myLibrary[books];
     library.appendChild(book);
 
-    let deleteBook = document.createElement('span'); // delete book
+    let deleteBook = document.createElement('span'); // delete book button
     deleteBook.innerHTML = '&times;';
     deleteBook.classList.add('delete-book');
     deleteBook.setAttribute('data-index', `${books}`);
@@ -36,15 +36,17 @@ function displayLibrary() {
   deleteBook();
 };
 
-function deleteBookLibrary() {
-  // add function to delete the book from the library
-}
+function deleteBookLibrary(array, index) { // delete book from library array
+  let arrayRemoved = array.splice(index,1)
+  return array
+};
 
-function deleteBook() {
+function deleteBook() { // delete book button deletes correct book
   for (const deleteBookButton of deleteBookButtons) {
     deleteBookButton.addEventListener('click', function() {
       let deleteBookIndex = document.querySelectorAll(`[data-index]`);
       console.log(deleteBookIndex);
+      console.log(deleteBookButton);
       for (const deleteBookItem of deleteBookIndex) {
         if (deleteBookItem.dataset.index === deleteBookButton.dataset.index) {
           deleteBookItem.remove();
