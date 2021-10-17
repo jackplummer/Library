@@ -8,41 +8,46 @@
   <link rel="stylesheet" href="style.css"/>
   <title>Library App</title>
 </head>
-<body>
-  <div class="header">My Library</div>
-  <div class="main">
-    <button id="add">Add Book</button>
-    <div class="library">
-      <table class="library-table">
-        <tr>
-          <th>Title:</th>
-          <th>Author:</th>
-          <th>Pages:</th>
-          <th>Read:</th>
-          <th>Delete:</th>
-          <th>Read?:</th>
-        </tr>
-      </table>
+<body style="background-color: #001f3f">
+  <div class="content">
+    <div class="header">
+      <h1>My Library</h1>
+      <button id="add">Add Book</button>
     </div>
-  </div>
-  <!-- Modal below-->
-  <div class="modal">
-    <div class="modal-content">
-      <span class="close">&times;</span>
-      <label for="title">Book Title:</label>
-      <input type="text" id="title" name="title"> <br><br>
-      <label for="author">Author:</label>
-      <input type="text" id="author" name="author"> <br><br>
-      <label for="pages">Pages:</label>
-      <input type="text" id="pages" name="pages"> <br><br>
-      <label for="radio">Have you read it?</label>
-      <div id="radio">
-        <input type="radio" id="read" name="radio" value="Read" checked>
-        <label for="read">Read</label>
-        <input type="radio" id="not-read" name="radio" value="Not Read">
-        <label for="not-read">Not Read</label> <br><br>
+    <div class="main">
+      <div class="library">
+        <table class="library-table">
+          <tr>
+            <th>Title:</th>
+            <th>Author:</th>
+            <th>Pages:</th>
+            <th>Read:</th>
+            <th>Delete:</th>
+            <th>Read?:</th>
+          </tr>
+        </table>
       </div>
-      <input type="submit" id="submit" value="Add to Library">
+    </div>
+    <!-- Modal below-->
+    <div class="modal">
+      <div class="modal-content">
+        <span class="close">&times;</span>
+        <h2>Add Book</h2>
+        <label for="title">Book Title:</label>
+        <input type="text" id="title" name="title"> <br><br>
+        <label for="author">Author:</label>
+        <input type="text" id="author" name="author"> <br><br>
+        <label for="pages">Pages:</label>
+        <input type="text" id="pages" name="pages"> <br><br>
+        <label for="radio">Have you read it?</label>
+        <div id="radio">
+          <input type="radio" id="read" name="radio" value="Read" checked>
+          <label for="read">Read</label>
+          <input type="radio" id="not-read" name="radio" value="Not Read">
+          <label for="not-read">Not Read</label> <br><br>
+        </div>
+        <input type="submit" id="submit" value="Add to Library">
+      </div>
     </div>
   </div>
 </body>

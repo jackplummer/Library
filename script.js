@@ -39,8 +39,8 @@ function addBookToLibrary(book) {
   let readButton = document.createElement('span');
   readButton.innerHTML = '&#128214;';
   readButton.setAttribute('data-index', `${book.index}`);
+  readButton.classList.add('read-button');
   rowReadButton.appendChild(readButton);
-  console.log(row);
   readButton.addEventListener('click', function() {
     if (row.childNodes[3].textContent === 'Read') {
       row.childNodes[3].textContent = 'Not Read';
@@ -49,8 +49,6 @@ function addBookToLibrary(book) {
     };
   })
 };
-
-
 
 // Modal
 const modal = document.querySelector(".modal");

@@ -1,11 +1,66 @@
-.book-card {
-  font-family: Arial, Helvetica, sans-serif;
-  padding: 10px;
-  margin: 10px;
+.content {
+  font-family: Helvetica, sans-serif;
+  color: #7FDBFF;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: 150px;
+}
+
+h1 {
+  font-weight: bolder;
+  font-size: 36px;
+}
+
+.library {
   display: flex;
   justify-content: center;
-  align-items: center;
-  background-color: antiquewhite;
+}
+
+#submit {
+  background-color: #AAAAAA; 
+}
+
+#add {
+  font-size: 18px;
+  background-color: #DDDDDD;
+}
+
+#submit, #add {
+  padding: 6px 18px;
+  border-radius: 4px;
+  font-weight: bold;
+  color: #001f3f;
+  transition-duration: 0.4s;
+}
+
+#submit:hover,
+#add:hover {
+  background-color: #7FDBFF;
+  cursor: pointer;
+}
+
+.library-table {
+  width: 75%;
+  border-spacing: 20px;
+  font-size: 20px;
+  text-align: center;
+  border: #7FDBFF solid 2px;
+}
+
+th {
+  border-bottom: #7FDBFF solid 2px;
+}
+
+.read-button {
+  cursor: pointer;
 }
 
 .modal {
@@ -21,18 +76,22 @@
 }
 
 .modal-content {
-  background-color: #fefefe;
+  background-color: #DDDDDD;
+  color: #001f3f;
   margin: 15% auto;
   padding: 20px;
   border: 1px solid #888;
-  width: 80%;
+  width: 50%;
 }
 
 .close, .delete-book {
   color: #aaa;
-  float: right;
   font-size: 28px;
   font-weight: bold;
+}
+
+.close {
+  float: right;
 }
 
 .close:hover,
