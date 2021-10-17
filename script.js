@@ -42,7 +42,11 @@ function addBookToLibrary(book) {
   rowReadButton.appendChild(readButton);
   console.log(row);
   readButton.addEventListener('click', function() {
-    console.log(row[3])
+    if (row.childNodes[3].textContent === 'Read') {
+      row.childNodes[3].textContent = 'Not Read';
+    } else {
+      row.childNodes[3].textContent = 'Read';
+    };
   })
 };
 
